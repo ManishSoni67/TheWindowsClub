@@ -1,0 +1,4 @@
+G:\Users\Manish\Documents\Visual Studio 2012\Projects\TheWindowsClub\WindowsClub.Models\Bin\Debug\WindowsClub.Models.dll
+G:\Users\Manish\Documents\Visual Studio 2012\Projects\TheWindowsClub\WindowsClub.Models\Bin\Debug\WindowsClub.Models.pdb
+G:\Users\Manish\Documents\Visual Studio 2012\Projects\TheWindowsClub\WindowsClub.Models\obj\Debug\WindowsClub.Models.dll
+G:\Users\Manish\Documents\Visual Studio 2012\Projects\TheWindowsClub\WindowsClub.Models\obj\Debug\WindowsClub.Models.pdb

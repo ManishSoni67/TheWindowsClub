@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4A0D527-DCF9-41E2-A167-D5DFF3A7E1FB}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheWindowsClub</RootNamespace>
+    <AssemblyName>TheWindowsClub</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>TheWindowsClub.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>TheWindowsClub.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.30924.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit.Controls">
+      <HintPath>B:\MultiMedia\Windows Phone SDK\Coding4Fun.Toolkit (Windows Phone 7)\Coding4Fun.Toolkit.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>B:\MultiMedia\Windows Phone SDK\Windows Phone Updated Controls\WP7\Debug\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.ServiceModel.Syndication">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ServiceModel.Syndication.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutTWC.xaml.cs">
+      <DependentUpon>AboutTWC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventArgs\RssContentEventArgs.cs" />
+    <Compile Include="View Models\DownLoadFeedNews.cs" />
+    <Compile Include="View Models\IEFeedNewsVM.cs" />
+    <Compile Include="View Models\LiveFeedNewsVM.cs" />
+    <Compile Include="View Models\SecurityFeedNewsVM.cs" />
+    <Compile Include="Views\About_Page.xaml.cs">
+      <DependentUpon>About_Page.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\DownLoadsFeedNews.xaml.cs">
+      <DependentUpon>DownLoadsFeedNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IEFeedNews.xaml.cs">
+      <DependentUpon>IEFeedNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LiveFeedNews.xaml.cs">
+      <DependentUpon>LiveFeedNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecurityFeedNews.xaml.cs">
+      <DependentUpon>SecurityFeedNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News.xaml.cs">
+      <DependentUpon>News.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View Models\NewsVM.cs" />
+    <Compile Include="View Models\MainPageVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View Models\WindowsFeedNewsVM.cs" />
+    <Compile Include="Views\WindowsFeedNews.xaml.cs">
+      <DependentUpon>WindowsFeedNews.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="AboutTWC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\About_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DownLoadsFeedNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IEFeedNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LiveFeedNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SecurityFeedNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\News.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WindowsFeedNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1367358599_facebook_circle_color.png" />
+    <Content Include="1367358634_google_circle_color.png" />
+    <Content Include="1367358969_72-windows8.png" />
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\appbar.refresh.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1367358599_facebook_circle_color.png" />
+    <Content Include="Images\1369001253_news.png" />
+    <Content Include="Images\1369065312_Gnome-Web-Browser-64.png" />
+    <Content Include="Images\1369066004_wall_post.png" />
+    <Content Include="Images\1369066020_share_this_icon.png" />
+    <Content Include="Images\1369066028_email_open.png" />
+    <Content Include="Images\1369092648_rss.png" />
+    <Content Include="Images\1369431249_News_source.png" />
+    <Content Include="Images\1369434101_rss_square_gray.png" />
+    <Content Include="Images\1369580799_security-high.png" />
+    <Content Include="Images\1369580839_32-windows8.png" />
+    <Content Include="Images\1369581314_IE.png" />
+    <Content Include="Images\1369581462_Live_Messenger.png" />
+    <Content Include="Images\1369582696_Folder-Downloads.png" />
+    <Content Include="Images\The Widows Club.jpg" />
+    <Content Include="Images\TWCLogo.png" />
+    <Content Include="Images\WCDown.png" />
+    <Content Include="Images\WCLeft.png" />
+    <Content Include="Images\WCright.png" />
+    <Content Include="Images\WCUp.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="windows---wallpaper.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsClub.Models\WindowsClub.Models.csproj">
+      <Project>{4CF03909-DEB2-4AC6-BFCF-6633C90048A8}</Project>
+      <Name>WindowsClub.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Facebook alt 4.png" />
+    <Resource Include="Google+ alt.png" />
+    <Resource Include="Linked in alt.png" />
+    <Resource Include="The Widows Club.jpg" />
+    <Resource Include="TWCLogo.png" />
+    <Resource Include="Twitter alt 2.png" />
+    <Resource Include="Twitter alt 3.png" />
+    <Resource Include="Views\1367358599_facebook_circle_color.png" />
+    <Resource Include="Views\1367358634_google_circle_color.png" />
+    <Resource Include="Views\1367358969_72-windows8.png" />
+    <Resource Include="Views\Logo.png" />
+    <Resource Include="windows-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

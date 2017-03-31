@@ -1,0 +1,64 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TheWindowsClub" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" x:Class="TheWindowsClub.IEFeedNews"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+	<UserControl.DataContext>
+		<local:IEFeedNewsVM/>
+	</UserControl.DataContext>
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid VerticalAlignment="Top">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<toolkit:PerformanceProgressBar IsIndeterminate="{Binding Isbusy, Mode=TwoWay}" Margin="1,1,1,-1"/>
+			<TextBlock TextWrapping="Wrap" Text="{Binding Status, Mode=TwoWay}" HorizontalAlignment="Left" Grid.Row="1" FontSize="13.333"/>
+		</Grid>
+		<ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+
+			<Grid x:Name="ContentPanel">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="100" />
+				</Grid.RowDefinitions>
+				<toolkit:HubTile x:Name="first" Width="200" Height="200" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding FirstTile.PlainSummary, Mode=TwoWay}" Notification="{Binding FirstTile.Title, Mode=TwoWay}" Source="{Binding FirstTile.Image, Mode=TwoWay}" Title="{Binding FirstTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Second_" Width="200" Height="200" Grid.Column="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding SeconTile.PlainSummary, Mode=TwoWay}" Notification="{Binding SeconTile.Title, Mode=TwoWay}" Source="{Binding SeconTile.Image, Mode=TwoWay}" Title="{Binding SeconTile.Title, Mode=TwoWay}" Size="Medium" />
+				<toolkit:HubTile x:Name="Third" Width="200" Height="200" Grid.Row="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding ThirdTile.PlainSummary, Mode=TwoWay}" Notification="{Binding ThirdTile.Title, Mode=TwoWay}" Source="{Binding ThirdTile.Image, Mode=TwoWay}" Title="{Binding ThirdTile.Title, Mode=TwoWay}" Size="Medium" />
+				<toolkit:HubTile x:Name="Fourth" Width="200" Height="200" Grid.Row="1" Grid.Column="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding ForthTile.PlainSummary, Mode=TwoWay}" Notification="{Binding ForthTile.Title, Mode=TwoWay}" Source="{Binding ForthTile.Image, Mode=TwoWay}" Title="{Binding ForthTile.Title, Mode=TwoWay}" Size="Medium" />
+				<toolkit:HubTile x:Name="Fifth_" Width="200" Height="200" Grid.Row="2" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding FifthTile.PlainSummary, Mode=TwoWay}" Notification="{Binding FifthTile.Title, Mode=TwoWay}" Source="{Binding FifthTile.Image, Mode=TwoWay}" Title="{Binding FifthTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Sixth" Width="200" Height="200" Grid.Row="2" Grid.Column="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding SixthTile.PlainSummary, Mode=TwoWay}" Notification="{Binding SixthTile.Title, Mode=TwoWay}" Source="{Binding SixthTile.Image, Mode=TwoWay}" Title="{Binding SixthTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Seventh" Width="200" Height="200" Grid.Row="3" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding SeventhTile.PlainSummary, Mode=TwoWay}" Notification="{Binding SeventhTile.Title, Mode=TwoWay}" Source="{Binding SeventhTile.Image, Mode=TwoWay}" Title="{Binding SeventhTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Eigtth" Width="200" Height="200" Grid.Row="3" Grid.Column="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding EightthTile.PlainSummary, Mode=TwoWay}" Notification="{Binding EightthTile.Title, Mode=TwoWay}" Source="{Binding EightthTile.Image, Mode=TwoWay}" Title="{Binding EightthTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Ninth" Width="200" Height="200" Grid.Row="4" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding NinthTile.PlainSummary, Mode=TwoWay}" Notification="{Binding NinthTile.Title, Mode=TwoWay}" Source="{Binding NinthTile.Image, Mode=TwoWay}" Title="{Binding NinthTile.Title, Mode=TwoWay}" Size="Medium"/>
+				<toolkit:HubTile x:Name="Tenth" Width="200" Height="200" Grid.Row="4" Grid.Column="1" Margin="4,10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Message="{Binding TenthModel.PlainSummary, Mode=TwoWay}" Notification="{Binding TenthModel.Title, Mode=TwoWay}" Source="{Binding TenthModel.Image, Mode=TwoWay}" Title="{Binding TenthModel.Title, Mode=TwoWay}" Size="Medium"/>
+					
+
+			</Grid>
+					
+		</ScrollViewer>
+
+	<!--TitlePanel contains the name of the application and page title-->
+					
+	</Grid>
+</UserControl>
